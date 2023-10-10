@@ -1,0 +1,1 @@
+#isInstance is faster than type
