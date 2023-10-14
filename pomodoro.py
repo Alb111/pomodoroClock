@@ -5,6 +5,7 @@ from RoundButton import RoundButton
 app = customtkinter.CTk()
 app.title("Pomodoro App")
 
+
 # Handle button click event here
 def on_mainButton_click():
     print("Round button clicked!")
@@ -18,7 +19,7 @@ def sec_handleClick(event):
     print("Time to reset!")
 
 ## Draw button on the canvas
-secButton = RoundButton(canvas, sec_handleClick, radius=100, x=750, y=300, fill="blue")
+secButton = RoundButton(canvas, sec_handleClick, radius=70, x=750, y=300, fill="blue")
 
 # main button
 def main_handleClick(event):
@@ -40,6 +41,11 @@ def resize(event):
     new_x = win_width // 2
     new_y = win_height // 2
     mainButton.update(radius=new_radius, x=new_x, y=new_y)
+
+    new_radius = min(win_width, win_height) // 6
+    new_x = 5 * win_width // 6
+    new_y = win_height // 2
+    secButton.update(radius=new_radius, x=new_x, y=new_y)
 
 app.bind("<Configure>", resize)
 

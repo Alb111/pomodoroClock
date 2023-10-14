@@ -1,3 +1,5 @@
+## GUI for user to enter STUDY_TIME, REST_TIME , and NUM_OF_CYCLES
+
 import tkinter
 import customtkinter
 
