@@ -56,15 +56,7 @@ class Pomodoro:
                 self.studyTrue = True
             self.repeats -= 1
 
-root = customtkinter.CTk()
-root.title('Pomodoro Timer')
-root.geometry("500x100")
-x = Pomodoro(root)
-x.setStudyTime(10)
-x.setBreakTime(5)
-x.setRepeats(2)
-x.start()
-root.mainloop()
+
 
 
         
